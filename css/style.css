@@ -1,0 +1,825 @@
+html {
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    text-align: center;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+#wrap {
+    min-height: 100%;
+}
+
+#main {
+    /* overflow: auto; */
+    padding-bottom: 50px;
+    /* this needs to be bigger than footer height*/
+}
+
+footer {
+    position: relative;
+    margin-top: -50px;
+    /* negative value of footer height */
+    height: 500px;
+    clear: both;
+    padding-top: 20px;
+}
+
+body {
+    /* font-family: "Alegreya Sans", sans-serif; */
+    font-family: 'Open Sans';
+    color: #333;
+    line-height: 1.95;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+/* sidebar wrapper et content */
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 250px;
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    z-index: 5;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+}
+
+.sidebar a.active {
+    /* background-color: orange; */
+    color: orange;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: rgba(147, 148, 148, 0.555);
+    color: black;
+    transition: all 0.4s;
+}
+
+/* ~~~~~~~~~~ PROFILE PICTURE ~~~~~~~~~ */
+.profile-pic {
+    border: 3px solid grey;
+    border-radius: 50%;
+}
+
+.profile img {
+    margin-top: 50px;
+    width: 150px;
+}
+
+/* ul */
+.list a {
+    display: flex;
+    justify-content: center;
+}
+
+/* ~~~~~~~~~~ PROPRIETES INDIVIDUELLES ~~~~~~~~~ */
+.text-orange {
+    color: orange;
+}
+
+.bg-orange {
+    background-color: orange;
+}
+
+.bg-perso {
+    background-color: #292929;
+}
+
+.mt-n-5 {
+    margin-top: -65px;
+}
+
+.text-bold {
+    font-weight: 800;
+}
+
+/* */
+#principal .title {
+    margin-left: -80px;
+
+}
+
+#competences h2 {
+    margin-left: -20px;
+}
+
+#sentence {
+    margin-top: 60px;
+}
+
+
+
+/* ~~~~~~~~~~ NAV & HEADER ~~~~~~~~~ */
+header nav {
+    position: relative;
+    z-index: 8;
+}
+
+.navbar-dark .navbar-nav .nav-link:focus, .navbar-dark .navbar-nav .nav-link:hover {
+    color: orange;
+}
+
+/*  */
+header {
+    height: 55px;
+}
+
+
+/* ~~~~~~~~~~ BANNER ~~~~~~~~~ */
+#banner {
+    position: relative;
+}
+
+.banner-img {
+    position: relative;
+    z-index: 2;
+    object-fit: cover;
+    height: 450px;
+    width: 100%;
+}
+
+body .row {
+    margin-right: unset;
+    margin-left: unset;
+}
+
+.transparent-grey {
+    position: relative;
+    z-index: 2;
+    height: 800px;
+    background-color: rgba(36, 34, 34, 0.384);
+    top: -800px;
+}
+
+
+/*  */
+#principal {
+    color: whitesmoke;
+    position: relative;
+    z-index: 6;
+    top: 115px;
+    height: 250px;
+}
+
+.typing-container {
+    font-size: 1.8rem;
+    color: whitesmoke;
+
+
+}
+
+/* https://medium.com/front-end-weekly/how-to-create-typing-effect-in-css-and-js-3252dd807f0a */
+
+
+.input-cursor {
+    display: inline-block;
+    width: 2px;
+    height: 42px;
+    background-color: rgb(71, 71, 71);
+    margin-left: 8px;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Then, inside .input-cursor: */
+.input-cursor {
+    animation: blink .6s linear infinite alternate;
+}
+
+/* ~~~~~~~~~~ SECTIONS ~~~~~~~~~ */
+
+#competences,
+#portfolio,
+#hire-me,
+#projets,
+#blog {
+    position: relative;
+    top: 0;
+}
+
+#contact {
+    position: relative;
+    height: 850px;
+}
+
+
+#apropos {
+    position: relative;
+    top: 0;
+}
+
+h2 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -.25px;
+    color: #222;
+}
+
+#apropos p {
+    font-size: 1.1rem;
+}
+
+#apropos img {
+    padding: 0.25rem;
+    border: 1px solid #dee2e6;
+    border-radius: .25rem;
+}
+
+
+
+.mt50 {
+    margin-top: 50px;
+}
+
+/* background color sections */
+#competences {
+    background-color: #d2d2d3;
+    /* height: 2434px; */
+}
+
+
+
+/* ~~~~~~~~~~ PORTFOLIO MOSAIQUE ~~~~~~~~~ */
+
+
+/*  */
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.container1:hover .image {
+    opacity: 0.3;
+}
+
+.container1:hover .middle {
+    opacity: 1;
+}
+
+.text {
+    /* background-color: rgb(32, 54, 94); */
+    background-color: orange;
+    color: white;
+    font-size: 16px;
+    padding: 16px 32px;
+}
+
+#portfolio .width50 {
+    width: 45%;
+    overflow: hidden;
+}
+
+/* portfolio mosaique */
+#portfolio #menu ul li {
+    display: inline;
+}
+
+#portfolio #menu ul {
+    margin: 0 0 0 -39px;
+    /* margin: 0 auto; */
+
+}
+
+
+
+#portfolio #menu ul li a:link,
+#portfolio #menu ul li a:visited {
+    color: rgb(0, 0, 0);
+    /* padding: 10px 10px; */
+    /* width: 100%; */
+    margin-top: 4px;
+    /* border: 2px solid #395e9e;
+    ; */
+    display: inline-block;
+    /* background-color: #365da2; */
+
+}
+
+#portfolio #menu ul li a {
+    padding: 5px 30px;
+}
+
+#portfolio #menu ul li a:hover,
+#portfolio #menu ul li a:active {
+    text-decoration: none;
+
+    /* color: whitesmoke; */
+    /* background-color: rgb(16, 50, 111); */
+}
+
+#menu nav {
+    margin-top: 50px;
+}
+
+#portfolio a:link, #portfolio a:visited{
+    text-decoration: none;
+    color: black;
+}
+/* ~~~~~~~~~~ HIRE ME ~~~~~~~~~ */
+
+
+#hire-me {
+    background-color: #292929;
+    /* background-image: url('../img/letswork-test.jpg'); */
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* filter: grayscale(100%); */
+}
+
+#hire-me button a:link, #hire-me button a:visited{
+    text-decoration: none;
+    color: black;
+}
+#hire-me button a:hover{
+    color: whitesmoke;
+}
+#hire-me button a:active{
+
+}
+#contact button a:hover{
+    color: whitesmoke;
+}
+
+/* ~~~~~~~~~~ PROJETS ~~~~~~~~~ */
+#projets {
+    background-color: #d2d2d3;
+    /* height: 700px; */
+}
+#projets .card{
+    height: 300px;
+    
+}
+
+#projets .container .row .card:hover {
+   background-color: #292929;
+   transition: all 0.5s;
+  
+}
+#projet-area img{
+    height: 150px !important;
+    width: auto;
+    margin-left: 0px;
+}
+
+.bg-cinema{
+    background-color: #7e89c7;
+}
+
+
+.bg-blue{
+    background-color: #afc1d8;
+}
+
+.bg-greenblue{
+    background-color: #00bcd4;
+}
+#projets h3{
+       font-family: "Alegreya Sans", sans-serif;
+       /* font-family: 'Lobster', cursive; */
+       font-size: 2.2rem;
+       /* font-family: 'Play', sans-serif; */
+       font-family: 'Nanum Gothic', sans-serif;
+       text-transform: uppercase;
+}
+#projets h6{
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+#projets .btn:hover{
+    color: rgb(184, 126, 18);
+}
+/* carousel */
+.carousel .carousel-indicators li {
+    width: 10px;
+   height: 10px;
+   border-radius: 100%;
+ }
+
+/* ~~~~~ MODAL ~~~~~ */
+.modal-footer {
+    display: none;
+}
+
+.modal-dialog {
+    max-width: 100%;
+
+}
+
+#projets .modal-body {
+    height: 700px;
+    margin: 0 auto;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-header .close {
+    font-size: 40px;
+}
+
+/* carousel */
+.carousel,
+.carousel-inner {
+    width: 400px;
+}
+
+.carousel-indicators li {
+    background-color: black;
+}
+
+.mt100 {
+    margin-top: 100px;
+}
+
+#exampleModal img, #Modal2 img{
+    height: 250px;
+}
+
+.carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+top:255px;
+}
+
+#projetNetflix #carouselProjet2 .carousel-indicators {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+top:275px;
+}
+
+/*  */
+
+/*  */
+#blog .card {
+    border: unset;
+}
+
+#projets .modal {
+    padding-right: unset;
+}
+
+.modal-dialog {
+    margin: 0;
+}
+
+.modal-content {
+    padding-bottom: 132px;
+}
+
+/* ~~~~~~~~~~ CONTACT ~~~~~~~~~ */
+#contact {
+    background-color: #d2d2d3;
+    /* margin-top: -200px; */
+}
+
+/* ~~~~~~~~~~ FOOTER ~~~~~~~~~ */
+footer {
+    color: whitesmoke;
+    background-color: #292929;
+}
+
+.line-light {
+    margin-top: 40px;
+    background-color: whitesmoke;
+}
+
+/* icons */
+.icon-phone,
+.icon-mail4,
+.icon-map2 {
+    font-size: 1.8rem;
+}
+
+.icon-github:before {
+    content: "\eab0";
+    color: rgb(165, 0, 165);
+}
+
+.icon-facebook,
+.icon-twitter,
+.icon-instagram,
+.icon-github,
+.icon-linkedin {
+    font-size: 1.5rem;
+}
+
+.mail a:link,
+.mail a:visited, .tel a:link, .tel a:visited, .map a:link, .map a:visited {
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+.mail a:hover, .tel a:hover, .map a:hover {
+    color: orange;
+}
+
+.mail a:active, .tel a:active, .map a:hover {
+
+}
+
+
+/* reseaux sociaux */
+.facebook a:link, .facebook a:visited, .twitter a:link, .twitter a:visited, .instagram a:link, .instagram a:visited, .github a:link, .github a:visited, .linkedin a:link, .linkedin a:visited{
+    text-decoration: none;
+}
+.facebook a:hover{
+   color: #4d92ec;
+}
+.facebook a:active{
+
+}
+
+
+/* margins */
+
+#apropos,
+#competences,
+#projets .container,
+#blog,
+#contact {
+    margin-top: 30px;
+}
+
+#competences,
+#portfolio,
+#projets,
+#hire-me,
+#blog {
+    padding-bottom: 40px;
+}
+
+#title {
+    text-align: left;
+}
+
+.image-move {
+    object-fit: 50% 50%;
+}
+
+@media (min-width: 560px) {
+    .banner-img {
+        height: 750px;
+    }
+
+    #principal {
+        color: whitesmoke;
+        position: relative;
+        z-index: 6;
+        top: 200px;
+        height: 250px;
+    }
+
+    #principal .title {
+        margin-left: 0;
+    }
+
+
+    #apropos {
+        position: relative;
+        top: -700px;
+    }
+
+    #competences,
+    #portfolio,
+    #hire-me,
+    #projets,
+    #blog {
+        position: relative;
+        top: -530px;
+    }
+
+    #contact {
+        margin-top: -250px;
+        top: -250px;
+    }
+
+    footer {
+        margin-top: -300px;
+    }
+
+    #sentence {
+        margin-top: unset;
+    }
+
+    /* margin */
+    #apropos,
+    #competences {
+        margin-top: 0;
+    }
+
+    #feature-text {
+        margin-left: 20px;
+    }
+
+    #sentence {
+        margin-right: -12px;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    .typing-container {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        /* align-items: center; */
+    }
+
+    .typing-container {
+        text-align: center;
+    }
+
+
+}
+
+
+@media (min-width : 576px) {
+    footer {
+        height: 300px;
+
+    }
+}
+
+@media (min-width : 768px) {
+    #feature-text {
+        margin-left: -90px;
+    }
+
+    #sentence {
+        margin-right: 0px;
+    }
+
+    /* modal margin */
+    /* .mt-n-165 {
+        margin-top: -165px;
+    }
+
+    .mt-n-250 {
+        margin-top: -250px;
+    } */
+
+    #modal .carousel-inner {
+        margin-top: 100px;
+    }
+}
+
+@media (min-width : 992px) {
+
+    header,
+    main,
+    footer {
+        position: relative;
+        margin-left: 250px;
+
+    }
+
+    header {
+        height: 0px;
+    }
+
+    .typing-container {
+        margin-top: -65px;
+    }
+
+    #portfolio {
+        height: 800px;
+    }
+
+    .banner-img {
+
+        height: 700px;
+
+    }
+
+    #sentence {
+        margin-left: -80px;
+    }
+
+    #feature-text {
+        margin-left: -100px;
+    }
+
+    #hire-me {
+        height: 200px;
+
+    }
+
+    #menu nav {
+        margin-top: 100px;
+    }
+
+    #blog h2 {
+        margin-top: 80px;
+    }
+
+    #projets {
+
+        height: 700px;
+    }
+
+    #projets .mt50 {
+        margin-top: 50px;
+    }
+
+
+
+}
+
+
+@media (min-width : 1028px) {
+
+    #principal {}
+
+    #feature-text {
+        margin-left: -115px;
+    }
+}
+
+@media (min-width : 1150px) {
+
+    #sentence {
+        margin-left: -180px;
+    }
+
+    #feature-text {
+        margin-left: -140px;
+    }
+}
+
+@media (min-width : 1250px) {
+
+    #principal {}
+
+    #feature-text {
+        margin-left: -165px;
+    }
+}
+
+@media (min-width : 1384px) {
+
+    #principal {}
+
+    #feature-text {
+        margin-left: -195px;
+    }
+}
+
+@media (min-width: 1200px){
+.container, .container-lg, .container-md, .container-sm, .container-xl {
+    max-width: 1238px;
+}
